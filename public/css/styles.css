@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --stroke : #010101;
+    --background : #16161a;
+    --headline : #fffffe;
+    --paragraph : #94a1b2;
+    --highlight : #7f5af0;
+    --text : #fffffe; 
+    --mini-stroke : #010101;
+    --body : #242629;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--body);
+    color: var(--text);
+}
+
+.navbar {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background);
+    
+    margin: 0.8rem;
+    border-radius: 1.5rem;
+}
+
+.nav__left {
+    display: flex;
+}
+
+.navbar__title {
+    margin: 0 0.4rem;
+}
+
+.nav__social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__icon {
+    display: inline-block;
+    margin-left: 0.8rem;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+.nav__icon:active {
+    transform: scale(0.8);
+}
+
+.nav__link {
+    color: var(--text);
+}
+
+.icon {
+    color: var(--text);
+    font-size: 1.4rem;
+}
+
+/* container info */
+.container {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    margin: 0.8rem;
+    border-radius: 1.5rem;
+}
+
+.container__title {
+    font-size: 2.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.container__para {
+    font-size: 1.4rem;
+    padding: 0.6rem 0;
+}
+
+.container__hashtags {
+    padding: 1rem 0;
+}
+
+.hashtag {
+    display: inline-block;
+    padding: 1.2rem;
+    background: var(--mini-stroke);
+    margin: 0.2rem;
+    color: var(--headline);
+    font-weight: bold;
+    border-radius: 0.4rem;
+    text-decoration: none;
+}
+
+
+
+/* skill container */
+
+.skills-title {
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0.8rem;
+
+}
+.skill {
+    display: flex;
+    padding: 1.2rem;
+    align-items: center;
+    background: var(--background);
+    border-radius: 0.6rem;
+    margin-left: 0.8rem;
+    transition: 0.8s;
+    margin: 0.5rem;
+}
+
+.skill:hover {
+    transform: scale(0.99);
+}
+
+.skill__content {
+    font-size: 1.2rem;
+}
+
+.skills__headline {
+    padding: 1.6rem;
+}
+
+.green {
+    border-bottom: 3px solid green;
+}
+
+.orange {
+    border-bottom: 3px solid orange;
+}
+
+
+img {
+    margin: auto;
+    width: 100%;
+}
+
+
+/* Wave animation */
+.wave {
+    animation: animate linear 1s infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* media */
+
+@media only screen and (max-width: 600px) { 
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
